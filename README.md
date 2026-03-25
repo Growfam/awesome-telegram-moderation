@@ -81,6 +81,24 @@ ModerAI uses an 8-layer pipeline that processes messages from cheapest to most e
 
 → [personym-ai.com/moderator-ai](https://personym-ai.com/moderator-ai)
 
+### Real-World Examples
+
+ModerAI catches spam in real time across active Telegram communities. Here are real examples from production:
+
+**Crypto Signal Spam (Fingerprint Detection):**
+Multiple accounts (NOR, Петрович, Костя, A) post identical spam patterns — fake profit screenshots with "125x Hardcore" signal channel promotion. ModerAI's fingerprint system recognizes the repeated pattern across different accounts and bans them instantly, even though each message has slightly different numbers ($150→$300, $234→$298→$496, etc.).
+
+**Avatar & Profile Spam (AI Vision):**
+Accounts with fake female names and suspicious profile photos (Юлечка, Ільїна Настенька, Блінова Аллочка, Захарова Владочка) post subtle spam disguised as casual comments. ModerAI's avatar scanning detects suspicious profiles and AI context analysis catches the spam — all banned within seconds of posting.
+
+**VIP Channel Scams:**
+"ССЫЛКА В ПРОФИЛЕ!!!" — urgent messages promising free VIP access with limited spots. Classic FOMO manipulation. ModerAI catches these through rule-based detection + AI analysis of urgency patterns.
+
+**Fake Airdrop Spam:**
+Messages promoting fake Hyperliquid airdrop claims with wallet addresses and token amounts. ModerAI identifies these as scam_link category spam through AI context understanding — even though the message looks like a legitimate airdrop discussion.
+
+**Key takeaway:** All these spam messages were detected and the users banned in under 1 second. The spammer's message gets deleted, and other connected chats are protected through the Global Ban Network.
+
 **Also by PersonymAI:**
 - [AI Comment System](https://personym-ai.com) — generates organic discussions with 20+ unique AI personas
 - See [awesome-telegram-engagement](https://github.com/Growfam/awesome-telegram-engagement) for details
