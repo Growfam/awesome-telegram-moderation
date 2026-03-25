@@ -86,16 +86,28 @@ ModerAI uses an 8-layer pipeline that processes messages from cheapest to most e
 ModerAI catches spam in real time across active Telegram communities. Here are real examples from production:
 
 **Crypto Signal Spam (Fingerprint Detection):**
-Multiple accounts (NOR, Петрович, Костя, A) post identical spam patterns — fake profit screenshots with "125x Hardcore" signal channel promotion. ModerAI's fingerprint system recognizes the repeated pattern across different accounts and bans them instantly, even though each message has slightly different numbers ($150→$300, $234→$298→$496, etc.).
+
+![Crypto signal spam caught by ModerAI](images/spam-crypto-signals-1.png)
+
+![More crypto signal spam variants](images/spam-crypto-signals-2.png)
+
+Multiple accounts post identical spam patterns — fake profit screenshots with signal channel promotion. ModerAI's fingerprint system recognizes the repeated pattern across different accounts and bans them instantly, even though each message has slightly different numbers.
 
 **Avatar & Profile Spam (AI Vision):**
-Accounts with fake female names and suspicious profile photos (Юлечка, Ільїна Настенька, Блінова Аллочка, Захарова Владочка) post subtle spam disguised as casual comments. ModerAI's avatar scanning detects suspicious profiles and AI context analysis catches the spam — all banned within seconds of posting.
 
-**VIP Channel Scams:**
-"ССЫЛКА В ПРОФИЛЕ!!!" — urgent messages promising free VIP access with limited spots. Classic FOMO manipulation. ModerAI catches these through rule-based detection + AI analysis of urgency patterns.
+![Avatar spam bots caught by ModerAI](images/spam-avatar-bots.png)
 
-**Fake Airdrop Spam:**
-Messages promoting fake Hyperliquid airdrop claims with wallet addresses and token amounts. ModerAI identifies these as scam_link category spam through AI context understanding — even though the message looks like a legitimate airdrop discussion.
+Accounts with fake female names and suspicious profile photos post subtle spam disguised as casual comments. ModerAI's avatar scanning detects suspicious profiles and AI context analysis catches the spam — all banned within seconds of posting.
+
+**VIP Channel Scams & Fake Airdrops:**
+
+![Scam links and fake airdrops caught by ModerAI](images/spam-scam-airdrop.png)
+
+Urgent messages promising free VIP access, fake airdrop claims with wallet addresses — ModerAI catches all of these through AI context understanding.
+
+**See ModerAI in action:**
+
+[![ModerAI Promo Video](https://img.youtube.com/vi/u_WoYL75w7s/maxresdefault.jpg)](https://youtu.be/u_WoYL75w7s)
 
 **Key takeaway:** All these spam messages were detected and the users banned in under 1 second. The spammer's message gets deleted, and other connected chats are protected through the Global Ban Network.
 
