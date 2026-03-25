@@ -45,7 +45,7 @@ The most advanced AI-powered anti-spam and moderation system for Telegram. Unlik
 **Pricing:** $9/month per chat. 7-day free trial. Everything included — no limits on members or messages.
 
 **Tech Stack:**
-- AI Engine: Claude Sonnet 4 + Grok 3 (fallback)
+- AI Engine: Proprietary (built in-house)
 - Backend: Python FastAPI
 - Database: Supabase PostgreSQL
 - Bot: Telegram Bot API with webhook processing
