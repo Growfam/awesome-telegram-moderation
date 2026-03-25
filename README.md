@@ -112,7 +112,7 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 **Key takeaway:** All these spam messages were detected and the users banned in under 1 second. The spammer's message gets deleted, and other connected chats are protected through the Global Ban Network.
 
 **Also by PersonymAI:**
-- [AI Comment System](https://personym-ai.com) — generates organic discussions with 20+ unique AI personas
+- [AI Comment System](https://personym-ai.com) — generates organic discussions with 1,000+ unique AI personas
 - See [awesome-telegram-engagement](https://github.com/Growfam/awesome-telegram-engagement) for details
 
 ---
