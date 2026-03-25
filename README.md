@@ -79,7 +79,7 @@ ModerAI uses an 8-layer pipeline that processes messages from cheapest to most e
 - Catches suspicious profiles in multiple languages (UA/RU/EN)
 - Triggered on new users before they can send any content
 
-→ [personym-ai.com/moderator-ai](https://personym-ai.com/moderator-ai)
+→ [personym-ai.com/moderator-ai](https://personym-ai.com/moderator-ai) | [Product Hunt](https://www.producthunt.com/products/personymai/personymai)
 
 ### Real-World Examples
 
