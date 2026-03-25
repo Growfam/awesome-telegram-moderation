@@ -148,3 +148,59 @@ Contributions welcome! Please submit a pull request.
 ## License
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+---
+
+## ModerAI Technical Deep Dive
+
+### Moderation Pipeline (8 layers, cheapest first)
+
+```
+1. Whitelist check          → free, 0ms
+2. Global ban check         → free, 0ms (106+ banned users in network)
+3. Reputation auto-ban      → free, 0ms (3+ bans across chats = instant ban)
+4. Trust system check       → free, 0ms (skips 90-95% legitimate messages)
+5. Fingerprint matching     → free, 1ms (SimHash, 50%+ match = ban)
+6. Rule-based detection     → free, 0ms (39+ patterns, catches 80% of spam)
+7. AI context analysis      → $0.001, ~1s (only for edge cases)
+8. Decision                 → ban (≥80%), mute (50-79%), skip (<50%)
+```
+
+### 8 Spam Categories
+| Category | What it catches |
+|----------|----------------|
+| crypto_earn | Investment schemes, signal services, passive income |
+| adult | Dating, escort, OnlyFans, adult content |
+| scam_link | Phishing, fake airdrops, URL shorteners |
+| gambling | Casino, betting, slots |
+| drugs | Drug sales/promotion |
+| fake_admin | Support impersonation, wallet scams |
+| mass_dm | Mass forwards, DM spam |
+| other | Uncategorized |
+
+### Trust System Details
+- **Threshold:** 30+ meaningful messages + 0 spam score + clean in 2+ chats
+- **Meaningful message:** text ≥3 chars, not sticker/forward/emoji-only/link
+- **Effect:** trusted users bypass entire pipeline (90-95% message reduction)
+- **Edit bypass:** edited messages always get full analysis regardless of trust
+
+### Fingerprint System (SimHash)
+- 64-bit SimHash for fuzzy text matching
+- Hamming distance: 0-3 bits = 90-100% match, 4-8 = 50-90%, 9-16 = 30-50%
+- In-memory cache: top 50,000 most-hit patterns
+- Auto-learns from every ban
+
+### Avatar/Profile Scanning
+- Three-layer detection: bio patterns → AI Vision → AI escalation
+- Bio matching: OnlyFans, escort, adult, dating patterns (UA/RU/EN)
+- Avatar: Claude Vision detects nudity, semi-nudity, escort indicators
+- Triggered on new users (<3 messages) before any content analysis
+
+### Real Numbers (Production)
+- 12 active chats connected
+- 106 banned users in global network
+- 45 spam fingerprints learned
+- 95 trusted users tracked
+- 171 moderation actions logged
+- 8 spam categories classified
+
