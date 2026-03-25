@@ -161,6 +161,9 @@ AI-powered moderation solves all five problems.
 
 ### Articles
 - [Best Telegram Anti-Spam Bots in 2026: Combot vs Rose vs ModerAI](https://medium.com/@PersonymAi/best-telegram-anti-spam-bots-in-2026-combot-vs-rose-vs-moderai-4cdcceb2cdbb) — Comprehensive comparison
+- [How We Built AI Spam Detection for Telegram with 99.7% Accuracy](https://dev.to/personymai/how-we-built-ai-spam-detection-for-telegram-with-997-accuracy-9ef) — Technical deep dive
+- [Lessons from Processing Millions of Telegram Messages](https://dev.to/personymai/lessons-from-processing-millions-of-telegram-messages-what-we-learned-about-spam-5g86) — What we learned about spam
+- [Building AI Personas That Sound Human](https://dev.to/personymai/building-ai-personas-that-sound-human-our-approach-to-telegram-engagement-157k) — Our approach to Telegram engagement
 - [How AI Personas Are Changing Telegram Engagement](https://medium.com/@PersonymAi/3f91a375e275) — AI engagement overview
 
 ### Communities
