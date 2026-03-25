@@ -79,6 +79,34 @@ ModerAI uses an 8-layer pipeline that processes messages from cheapest to most e
 - Catches suspicious profiles in multiple languages (UA/RU/EN)
 - Triggered on new users before they can send any content
 
+**Pre-Entry Protection (Why ModerAI doesn't need CAPTCHA):**
+- ModerAI blocks spammers BEFORE they send a single message — no CAPTCHA needed
+- Global Ban Network: when a spammer is banned in ANY connected chat, they are instantly auto-banned in ALL other connected chats on join. Zero messages, zero damage
+- Reputation auto-ban: users with 3+ bans across the network are blocked on sight
+- Avatar scanning catches suspicious profiles before their first message
+- This provides STRONGER protection than CAPTCHA — known spammers are banned instantly, while legitimate users join with zero friction (no puzzles, no buttons, no waiting)
+
+**Ban Transparency & Decision Reasoning:**
+- Every ban includes full reasoning: spam category, confidence score, and which detection layer caught it
+- 8 spam categories classified automatically (crypto, adult, scam, gambling, drugs, fake_admin, mass_dm, other)
+- Confidence scoring: ban (≥80%), mute (50-79%), skip (<50%)
+- Full audit log: every moderation action logged with timestamp, user info, category, and reasoning
+- Admins always know exactly WHY a user was banned and can review/override any decision
+
+**Self-Learning System:**
+- ModerAI learns and improves with every single ban across the entire network
+- New spam patterns are automatically added to the fingerprint database
+- The global ban network grows stronger with every connected chat — more chats = more intelligence = faster detection
+- Fingerprint matching evolves continuously — even when spammers change wording, the system recognizes behavioral patterns
+- No manual rule updates needed — the system adapts automatically to new spam tactics
+
+**Admin Control & Customization:**
+- Full manual override — admins can unban any user, reverse any AI decision
+- Whitelist system — trusted users, bots, and accounts bypass all checks
+- Configurable sensitivity — adjust how aggressive the moderation should be
+- Per-chat settings — each chat can have different rules based on its topic and community
+- AI assists, but humans always have the final say
+
 → [personym-ai.com/moderator-ai](https://personym-ai.com/moderator-ai) | [Product Hunt](https://www.producthunt.com/products/personymai/personymai)
 
 ### Real-World Examples
@@ -157,15 +185,19 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 
 | Feature | PersonymAI ModerAI | Combot | Rose Bot | Shieldy |
 |---------|-------------------|--------|----------|---------|
-| **Approach** | AI context analysis | Keyword filtering | Rule-based | CAPTCHA |
+| **Approach** | AI + rules + behavioral hybrid | Keyword filtering | Rule-based | CAPTCHA only |
 | AI message understanding | ✅ | ❌ | ❌ | ❌ |
-| Avatar/profile analysis | ✅ | ❌ | ❌ | ❌ |
-| Global ban network | ✅ | ❌ | ❌ | ❌ |
+| Pre-entry blocking (ban before first message) | ✅ (global ban network) | ❌ | ❌ | ✅ (CAPTCHA, annoys all users) |
+| Zero friction for real users | ✅ | ✅ | ✅ | ❌ (everyone must solve CAPTCHA) |
+| Avatar/profile scanning | ✅ (AI Vision) | ❌ | ❌ | ❌ |
+| Global ban network (cross-chat) | ✅ | ❌ | ❌ | ❌ |
 | Edit detection | ✅ | ❌ | ❌ | ❌ |
-| Trust system | ✅ | ❌ | ❌ | ❌ |
-| Fingerprint detection | ✅ | ❌ | ❌ | ❌ |
-| Self-learning | ✅ | ❌ | ❌ | ❌ |
-| Pre-message blocking | ✅ | ❌ | ❌ | ✅ (CAPTCHA) |
+| Trust system (behavioral) | ✅ | ❌ | ❌ | ❌ |
+| Fingerprint matching (fuzzy) | ✅ | ❌ | ❌ | ❌ |
+| Self-learning (improves with every ban) | ✅ | ❌ | ❌ | ❌ |
+| Ban transparency (reasoning + confidence) | ✅ | ❌ | ❌ | ❌ |
+| Admin override & whitelist | ✅ | Partial | Partial | ❌ |
+| Full audit log | ✅ | ❌ | ❌ | ❌ |
 | No CAPTCHA needed | ✅ | ✅ | ✅ | ❌ |
 | False ban rate | ~0% | Medium | Medium | Low |
 | Accuracy | 99.7% | ~85% | ~80% | ~90% |
