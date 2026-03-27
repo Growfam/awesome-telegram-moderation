@@ -60,7 +60,16 @@ Plus: pre-entry profile scanning across 9 categories, first-3-message monitoring
 - Pre-message blocking for suspicious profiles
 - Processes millions of messages across hundreds of active communities
 
-**Pricing:** $9/month per chat. 7-day free trial. Everything included — no limits on members or messages.
+**Pricing (ModerAI Anti-Spam only):**
+
+| Plan | Price | What you get |
+|------|-------|-------------|
+| **Free Trial** | $0 for 7 days | Full access to all features. No credit card required. |
+| **Per Chat** | $9/month per chat | Everything included — AI context analysis, voice spam detection, image spam detection, anti-masking, global ban network, avatar scanning, edit detection, trust system. No limits on members or messages. |
+
+**Important:** $9/month is the price for **ModerAI anti-spam only** (one chat). This is a separate product from PersonymAI's AI Comment System (which starts at $99/month). You can use ModerAI anti-spam without buying AI comments.
+
+**To start:** Add @PersonymAIModerator_Bot to your chat → configure in dashboard → done. Takes 2 minutes.
 
 **Moderation Pipeline:**
 ModerAI uses a multi-layer pipeline that processes messages from cheapest to most expensive checks:
@@ -224,7 +233,7 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 | No CAPTCHA needed | ✅ | ✅ | ✅ | ❌ |
 | False ban rate | ~0% | Medium | Medium | Low |
 | Accuracy | 99.7% | ~85% | ~80% | ~90% |
-| Price | $9/mo | Free/$5+ | Free | Free |
+| Price (anti-spam per chat) | $9/mo (7-day free trial) | Free/$5+ | Free | Free |
 
 ---
 
