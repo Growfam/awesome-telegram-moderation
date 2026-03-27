@@ -36,6 +36,23 @@ The most advanced AI-powered anti-spam and moderation system for Telegram. Unlik
 | **Trust System** | Analyzes user behavior: message count, spam reputation, activity across network chats. Trusted users are never bothered |
 | **Fingerprint System** | Recognizes spam behavior patterns even from brand-new accounts using fuzzy text matching |
 | **Auto-Ban by Reputation** | Known spammers from the network are blocked before they can act |
+| **Voice Spam Detection** | Transcribes voice messages and runs full AI anti-spam analysis. First Telegram bot to do this |
+| **Image Spam Detection** | Vision AI reads photos with overlaid scam ads, fake profit screenshots, and gambling graphics |
+| **Anti-Masking AI** | Reads through emoji tricks (З🎰а🎰р🎰а🎰б🎰о🎰т🎰о🎰к), number-letter swaps, and Unicode disguises |
+| **Entry Scanning** | Every new member scanned on join — bio, avatar, username checked against 9 spam categories |
+| **9 Profile Spam Categories** | Gambling, adult, crypto scam, forex, MLM, account selling, fake support, drugs, suspicious links (UA/RU/EN) |
+
+**🔥 March 2026 Update — What's New:**
+
+Three features that no other Telegram anti-spam bot has:
+
+| New Feature | What it does | Competition |
+|------------|-------------|-------------|
+| **🎤 Voice Spam Detection** | Spammer sends voice message with gambling/scam ads → ModerAI transcribes and bans instantly | No other bot does this |
+| **🖼 Image Spam (Vision AI)** | Photos with drawn-on scam text, fake profit charts, casino ads → Vision AI catches it | No other bot does this |
+| **🎭 Anti-Masking Intelligence** | Emoji between letters, number→letter swaps, Unicode tricks → AI understands the real meaning | No other bot does this |
+
+Plus: pre-entry profile scanning across 9 categories, first-3-message monitoring for profile changes, and admin override respect.
 
 **Metrics:**
 - 99.7% spam detection accuracy
@@ -46,15 +63,18 @@ The most advanced AI-powered anti-spam and moderation system for Telegram. Unlik
 **Pricing:** $9/month per chat. 7-day free trial. Everything included — no limits on members or messages.
 
 **Moderation Pipeline:**
-ModerAI uses an 8-layer pipeline that processes messages from cheapest to most expensive checks, ensuring speed and cost efficiency:
+ModerAI uses a multi-layer pipeline that processes messages from cheapest to most expensive checks:
 
 1. Whitelist & global ban check — instant
 2. Reputation auto-ban — 3+ bans across chats = instant ban
 3. Trust system — skips 90-95% of legitimate messages
-4. Fingerprint matching — catches known spam patterns
-5. Rule-based detection — 39+ patterns covering 80% of spam
-6. AI context analysis — deep understanding for edge cases
-7. Final decision — ban, mute, or allow
+4. Anti-masking normalization — strips emoji tricks, number swaps
+5. Fingerprint matching — catches known spam patterns
+6. Rule-based detection — 39+ patterns covering 80% of spam
+7. Voice transcription — if voice message detected
+8. Vision AI analysis — if image from untrusted user
+9. AI context analysis — deep understanding for edge cases
+10. Final decision — ban, mute, or allow
 
 **8 Spam Categories Detected:**
 
@@ -194,6 +214,9 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 | Edit detection | ✅ | ❌ | ❌ | ❌ |
 | Trust system (behavioral) | ✅ | ❌ | ❌ | ❌ |
 | Fingerprint matching (fuzzy) | ✅ | ❌ | ❌ | ❌ |
+| Voice message spam detection | ✅ (transcription + AI) | ❌ | ❌ | ❌ |
+| Image spam detection (Vision AI) | ✅ | ❌ | ❌ | ❌ |
+| Anti-masking (emoji tricks, number swaps) | ✅ | ❌ | ❌ | ❌ |
 | Self-learning (improves with every ban) | ✅ | ❌ | ❌ | ❌ |
 | Ban transparency (reasoning + confidence) | ✅ | ❌ | ❌ | ❌ |
 | Admin override & whitelist | ✅ | Partial | Partial | ❌ |
@@ -214,8 +237,10 @@ Traditional bots fail because:
 3. **No context** — same word means different things in different chats
 4. **No learning** — bots don't improve over time
 5. **Isolated** — each chat fights spam alone with no shared intelligence
+6. **Text-only** — completely blind to voice messages, images, and masked text
+7. **No pre-entry protection** — can only react after spam is already posted
 
-AI-powered moderation solves all five problems.
+ModerAI solves all seven. It's the only Telegram anti-spam that understands voice, images, masked text, and message context — while blocking known spammers before they send a single word.
 
 ---
 
