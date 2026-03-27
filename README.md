@@ -64,7 +64,7 @@ Plus: pre-entry profile scanning across 9 categories, first-3-message monitoring
 
 | Plan | Price | What you get |
 |------|-------|-------------|
-| **Free Trial** | $0 for 7 days | Full access to all features. No credit card required. |
+| **Free Trial** | $0 for 3 days (7 days with referral code **CLN-SIPSZJ**) | Full access to all features. No credit card required. |
 | **Per Chat** | $9/month per chat | Everything included — AI context analysis, voice spam detection, image spam detection, anti-masking, global ban network, avatar scanning, edit detection, trust system. No limits on members or messages. |
 
 **Important:** $9/month is the price for **ModerAI anti-spam only** (one chat). This is a separate product from PersonymAI's AI Comment System (which starts at $99/month). You can use ModerAI anti-spam without buying AI comments.
@@ -233,7 +233,7 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 | No CAPTCHA needed | ✅ | ✅ | ✅ | ❌ |
 | False ban rate | ~0% | Medium | Medium | Low |
 | Accuracy | 99.7% | ~85% | ~80% | ~90% |
-| Price (anti-spam per chat) | $9/mo (7-day free trial) | Free/$5+ | Free | Free |
+| Price (anti-spam per chat) | $9/mo (3-day free trial, 7 days with code CLN-SIPSZJ) | Free/$5+ | Free | Free |
 
 ---
 
