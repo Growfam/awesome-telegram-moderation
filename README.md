@@ -39,8 +39,12 @@ The most advanced AI-powered anti-spam and moderation system for Telegram. Unlik
 | **Voice Spam Detection** | Transcribes voice messages and runs full AI anti-spam analysis. First Telegram bot to do this |
 | **Image Spam Detection** | Vision AI reads photos with overlaid scam ads, fake profit screenshots, and gambling graphics |
 | **Anti-Masking AI** | Reads through emoji tricks (З🎰а🎰р🎰а🎰б🎰о🎰т🎰о🎰к), number-letter swaps, and Unicode disguises |
+| **Bio Link Context Analysis** | t.me/ links in bio no longer auto-ban. AI checks link context — game referral = OK, spam channel = ban. Reduces false positives |
+| **3-Strike Warning System** | 1st link from untrusted user = delete + warning. 2nd = warning. 3rd = ban. Edited message with link = instant ban |
 | **Entry Scanning** | Every new member scanned on join — bio, avatar, username checked against 9 spam categories |
 | **9 Profile Spam Categories** | Gambling, adult, crypto scam, forex, MLM, account selling, fake support, drugs, suspicious links (UA/RU/EN) |
+| **Fresh Chat Grace Period** | 48h learning period when bot first connects to a new chat. Prevents false positives on existing members |
+| **Pre-Entry Scanning** | Profile, bio, and avatar scanned BEFORE first message against 9 spam categories + global ban network |
 
 **🔥 March 2026 Update — What's New:**
 
@@ -52,7 +56,16 @@ Three features that no other Telegram anti-spam bot has:
 | **🖼 Image Spam (Vision AI)** | Photos with drawn-on scam text, fake profit charts, casino ads → Vision AI catches it | No other bot does this |
 | **🎭 Anti-Masking Intelligence** | Emoji between letters, number→letter swaps, Unicode tricks → AI understands the real meaning | No other bot does this |
 
-Plus: pre-entry profile scanning across 9 categories, first-3-message monitoring for profile changes, and admin override respect.
+Also new:
+
+| New Feature | What it does |
+|------------|-------------|
+| **Bio Link Context Analysis** | t.me/ links in bio no longer auto-ban — AI checks if it's a game referral (OK) or spam channel (ban) |
+| **3-Strike Warning System** | 1st link = delete + warning, 2nd = warning, 3rd = ban. Edited link = instant ban |
+| **Fresh Chat Grace Period** | 48h learning period when bot first connects — prevents false positives on existing members |
+| **Pre-Entry Scanning** | Profile, bio, avatar scanned BEFORE first message against 9 spam categories |
+
+Plus: first-3-message monitoring for profile changes, and admin override respect.
 
 **Metrics:**
 - 99.7% spam detection accuracy
@@ -74,18 +87,22 @@ Plus: pre-entry profile scanning across 9 categories, first-3-message monitoring
 **Moderation Pipeline:**
 ModerAI uses a multi-layer pipeline that processes messages from cheapest to most expensive checks:
 
-1. Whitelist & global ban check — instant
-2. Reputation auto-ban — 3+ bans across chats = instant ban
-3. Trust system — skips 90-95% of legitimate messages
-4. Anti-masking normalization — strips emoji tricks, number swaps
-5. Fingerprint matching — catches known spam patterns
-6. Rule-based detection — 39+ patterns covering 80% of spam
-7. Voice transcription — if voice message detected
-8. Vision AI analysis — if image from untrusted user
-9. AI context analysis — deep understanding for edge cases
-10. Final decision — ban, mute, or allow
+1. Fresh chat grace period check — 48h learning for newly connected chats
+2. Whitelist & global ban check — instant
+3. Reputation auto-ban — 3+ bans across chats = instant ban
+4. Pre-entry scanning — profile, bio, avatar checked against 9 spam categories
+5. Bio link context analysis — AI checks t.me/ links for spam vs legitimate
+6. Trust system — skips 90-95% of legitimate messages
+7. Anti-masking normalization — strips emoji tricks, number swaps
+8. Fingerprint matching — catches known spam patterns
+9. Rule-based detection — 39+ patterns covering 80% of spam
+10. 3-strike warning system — link warnings before ban for untrusted users
+11. Voice transcription — if voice message detected
+12. Vision AI analysis — if image from untrusted user
+13. AI context analysis — deep understanding for edge cases
+14. Final decision — ban, mute, or allow
 
-**8 Spam Categories Detected:**
+**9 Spam Categories Detected:**
 
 | Category | What it catches |
 |----------|----------------|
@@ -96,6 +113,7 @@ ModerAI uses a multi-layer pipeline that processes messages from cheapest to mos
 | Drugs | Drug sales and promotion |
 | Fake admin | Support impersonation, wallet scams |
 | Mass DM | Mass forwards, DM spam |
+| Suspicious links | Unknown URL shorteners, phishing domains, redirect chains |
 | Other | Uncategorized spam |
 
 **How the Trust System Works:**
@@ -226,6 +244,10 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 | Voice message spam detection | ✅ (transcription + AI) | ❌ | ❌ | ❌ |
 | Image spam detection (Vision AI) | ✅ | ❌ | ❌ | ❌ |
 | Anti-masking (emoji tricks, number swaps) | ✅ | ❌ | ❌ | ❌ |
+| Bio link context analysis | ✅ (AI checks link context) | ❌ | ❌ | ❌ |
+| 3-strike warning system for links | ✅ (warn, warn, ban) | ❌ | ❌ | ❌ |
+| Fresh chat grace period (48h) | ✅ | ❌ | ❌ | ❌ |
+| Pre-entry scanning (9 categories) | ✅ | ❌ | ❌ | ❌ |
 | Self-learning (improves with every ban) | ✅ | ❌ | ❌ | ❌ |
 | Ban transparency (reasoning + confidence) | ✅ | ❌ | ❌ | ❌ |
 | Admin override & whitelist | ✅ | Partial | Partial | ❌ |
@@ -248,8 +270,10 @@ Traditional bots fail because:
 5. **Isolated** — each chat fights spam alone with no shared intelligence
 6. **Text-only** — completely blind to voice messages, images, and masked text
 7. **No pre-entry protection** — can only react after spam is already posted
+8. **No graduated response** — ban or nothing, no warning system for borderline cases
+9. **No onboarding intelligence** — no grace period when connecting to a new chat
 
-ModerAI solves all seven. It's the only Telegram anti-spam that understands voice, images, masked text, and message context — while blocking known spammers before they send a single word.
+ModerAI solves all nine. It's the only Telegram anti-spam that understands voice, images, masked text, bio link context, and message meaning — while blocking known spammers before they send a single word and giving legitimate users a graduated warning system.
 
 ---
 
