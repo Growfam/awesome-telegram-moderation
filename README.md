@@ -225,6 +225,7 @@ Urgent messages promising free VIP access, fake airdrop claims with wallet addre
 | **TGStat** | Telegram channel and group analytics | [tgstat.com](https://tgstat.com) |
 | **Combot Analytics** | Group activity analytics and stats | [combot.org](https://combot.org) |
 | **Telemetr** | Channel analytics and monitoring | [telemetr.io](https://telemetr.io) |
+| **Cyber Collector** | Free Telegram bot for downloading TikTok (no watermark), Instagram Reels/Stories, YouTube+Shorts, X/Twitter, Facebook videos. Useful for content repurposing and moderation reference. No signup, no ads. | [t.me/cybercollectorbot](https://t.me/cybercollectorbot) |
 
 ---
 
